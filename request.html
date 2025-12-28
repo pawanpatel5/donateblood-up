@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Blood</title>
+    <link rel="stylesheet" href="request.css">
+</head>
+<body>
+      <div id="header">
+      <button class="btn" onclick="openHome()">HOME</button>
+  </div>
+  <div id="donor">
+  <h2>NEED BLOOD</h2>
+  <div id="details">
+    <form id="myForm" onsubmit="return requestDetail()">
+      <div>
+        <label for="district">District</label>
+        <select id="district" required>
+          <option selected hidden>Select District (UP)</option>
+          <option>Ghaziabad</option>
+          <option>Noida</option>
+          <option>Lucknow</option>
+          <option>Kanpur</option>
+          <option>Agra</option>
+          <option>Varanasi</option>
+          <option>Meerut</option>
+          <option>Prayagraj</option>
+          <option>Gorakhpur</option>
+          <option>Aligarh</option>
+        </select>
+      </div>
+       <div>
+        <label for="address">Address</label>
+        <input type="text" id="address" placeholder="Address :" required />
+      </div>
+      <div>
+        <label for="pincode">Pincode</label>
+        <input type="tel" id="pincode" placeholder="Pincode (6 digit) :" pattern="[0-9]{6}" maxlength="6" required />
+      </div>
+      <div>
+        <label for="blood">Blood Group</label>
+        <select id="blood" required>
+          <option selected hidden>Select Blood Group</option>
+          <option>A+</option>
+          <option>A-</option>
+          <option>B+</option>
+          <option>B-</option>
+          <option>AB+</option>
+          <option>AB-</option>
+          <option>O+</option>
+          <option>O-</option>
+        </select>
+      </div>
+      <div>
+        <label for="contact">Phone Number</label>
+        <input type="tel" id="contact" placeholder="Phone Number :" pattern="[0-9]{10}" inputmode="numeric" maxlength="10" required>
+      </div>
+      <div id="btn" >
+        <button class="btn" type="submit">SUBMIT REQUEST</button>
+        </div>
+    </form>
+      </div>
+      </div>
+<div id="footer">
+    <h3>© 2025 Blood Donor Website | All Rights Reserved</h3>
+    <h3>Designed & Developed by Pawan Kumar</h3>
+  </div>  
+  <script src="request.js"></script>
+</body>
+</html>

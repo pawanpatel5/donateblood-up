@@ -1,0 +1,239 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+#donor {
+  width: 60%;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid skyblue;
+  margin: 50px auto;
+  background: white;
+}
+#donor h2 {
+  text-align: center;
+  margin-bottom: 12px;
+  color: darkred;
+}
+#details {
+  width: 95%;
+  padding: 30px 35px;
+  border: 2px solid pink;
+  border-radius: 8px;
+  background: pink;
+}
+#details div {
+  margin-bottom: 10px;
+}
+#details div:hover {
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+#details div:focus {
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+label {
+  font-size: 15px;
+  margin-bottom: 7px;
+  display: block;
+  font-weight: 600;
+}
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+#btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+#header {
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+}
+.btn {
+  padding: 20px 25px;
+  border: 1px solid rgb(139, 0, 0);
+  border-radius: 999px;
+  color: rgb(242, 12, 39);
+  background: white;
+  font-size: 20px;
+  font-weight: bold;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: rgb(242, 12, 39);
+  z-index: -1;
+  transition: width 0.4s ease;
+}
+
+.btn:hover::before {
+  width: 100%;
+}
+.btn:hover {
+  border-color: white;
+  color: white;
+}
+#footer {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: black;
+  padding: 20px;
+  background: white;
+}
+body {
+  background: url("bg.jpg") no-repeat center
+    center / cover;
+}
+@media (max-width: 479px) {
+  #donor {
+    width: 95%;
+    padding: 18px;
+    margin: 30px auto;
+  }
+  #details {
+    width: 100%;
+    padding: 14px;
+  }
+  label {
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+  input,
+  select {
+    padding: 8px;
+    font-size: 13px;
+  }
+  .btn {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+  #footer {
+    font-size: 10px;
+    padding: 8px;
+  }
+}
+@media (min-width: 480px) and (max-width: 639px) {
+  #donor {
+    width: 90%;
+    padding: 22px;
+  }
+  #details {
+    padding: 18px;
+  }
+  label {
+    font-size: 13px;
+  }
+  input,
+  select {
+    padding: 9px;
+    font-size: 14px;
+  }
+  .btn {
+    font-size: 16px;
+    padding: 12px 18px;
+  }
+  #footer {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+@media (min-width: 640px) and (max-width: 767px) {
+  #donor {
+    width: 75%;
+    padding: 30px;
+  }
+  #details {
+    padding: 25px 30px;
+  }
+  label {
+    font-size: 14px;
+  }
+  input,
+  select {
+    padding: 10px;
+    font-size: 15px;
+  }
+  .btn {
+    font-size: 18px;
+    padding: 14px 22px;
+  }
+  #footer {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1024px) {
+  #donor {
+    width: 50%;
+    padding: 40px;
+  }
+  #details {
+    padding: 35px 40px;
+  }
+  label {
+    font-size: 16px;
+  }
+  input,
+  select {
+    padding: 12px;
+    font-size: 16px;
+  }
+  .btn {
+    font-size: 22px;
+    padding: 20px 30px;
+  }
+  #footer {
+    font-size: 22px;
+  }
+}
+@media (min-width: 1280px) {
+  #donor {
+    width: 45%;
+    padding: 50px;
+  }
+  #details {
+    padding: 45px 50px;
+  }
+  label {
+    font-size: 17px;
+  }
+  input,
+  select {
+    padding: 14px;
+    font-size: 17px;
+  }
+  .btn {
+    font-size: 24px;
+    padding: 22px 34px;
+  }
+  #footer {
+    font-size: 24px;
+    padding: 25px;
+  }
+}
