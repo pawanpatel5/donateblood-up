@@ -89,13 +89,35 @@ select {
   z-index: -1;
   transition: width 0.4s ease;
 }
-
 .btn:hover::before {
   width: 100%;
 }
 .btn:hover {
   border-color: white;
   color: white;
+}
+#results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+.resultCard {
+  background: white;
+  padding: 20px;
+  border: 2px solid rgb(139, 0, 0);
+  border-radius: 10px;
+  width: 80%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.resultCard h3 {
+  margin-bottom: 10px;
+  color: rgb(242, 12, 39);
+}
+.resultCard p {
+  font-size: 16px;
+  color: #333;
 }
 #footer {
   font-size: 20px;
@@ -130,6 +152,10 @@ body {
     padding: 8px;
     font-size: 13px;
   }
+  .resultCard {
+    width: 95%;
+    padding: 15px;
+  }
   .btn {
     font-size: 14px;
     padding: 10px 14px;
@@ -154,6 +180,9 @@ body {
   select {
     padding: 9px;
     font-size: 14px;
+  }
+  .resultCard {
+    width: 90%;
   }
   .btn {
     font-size: 16px;
@@ -180,6 +209,9 @@ body {
     padding: 10px;
     font-size: 15px;
   }
+   .resultCard {
+    width: 85%;
+  }
   .btn {
     font-size: 18px;
     padding: 14px 22px;
@@ -204,6 +236,9 @@ body {
     padding: 12px;
     font-size: 16px;
   }
+  .resultCard {
+    width: 75%;
+  }
   .btn {
     font-size: 22px;
     padding: 20px 30px;
@@ -227,6 +262,9 @@ body {
   select {
     padding: 14px;
     font-size: 17px;
+  }
+  resultCard {
+    width: 60%;
   }
   .btn {
     font-size: 24px;

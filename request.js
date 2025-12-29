@@ -25,3 +25,26 @@
     alert("Thank you for submitting your request. We will contact you soon!");
     return false;
   }
+  function performSearch() {
+    const searchTerm = document.getElementById("district").value.toLowerCase().trim();
+    const searchTerm1 = document.getElementById("blood").value.toLowerCase().trim();
+    const allDonors = JSON.parse(localStorage.getItem("donorDetails")) || [];
+    const resultsDiv = document.getElementById("results");
+    resultsDiv.innerHTML = "";
+    const filteredDonors = allDonors.filter(donor => 
+        donor.district.toLowerCase().includes(searchTerm.toLowerCase()) &&
+        donor.bloodGroup.toLowerCase().includes(searchTerm1.toLowerCase())
+    );
+    filteredDonors.forEach(donor => {
+        const resultCard = document.createElement("div");
+        resultCard.className = "resultCard";
+        resultCard.innerHTML = `
+            <h3>${donor.name}</h3>
+            <p>District: ${donor.district}</p>
+            <p>Blood Group: ${donor.bloodGroup}</p>
+            <p>Contact: ${donor.contact}</p>
+            <p>Age: ${donor.age}</p>
+        `;
+        resultsDiv.appendChild(resultCard);
+    });
+}
