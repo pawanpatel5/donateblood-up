@@ -9,6 +9,13 @@
   display: flex;
   align-items: center;
 }
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
 .btn {
   padding: 20px 25px;
   border: 1px solid rgb(139, 0, 0);
@@ -42,7 +49,6 @@
   color: white;
 }
 #card {
-  background: skyblue;
   width: 100%;
   max-width: 800px;
   margin: 30px auto;
@@ -51,7 +57,8 @@
   text-align: center;
 }
 .card {
-  background: pink;
+  border: 2px solid skyblue;
+  background: rgb(255, 192, 203, 0.2);
   width: 100%;
   border-radius: 8px;
   margin: 15px auto;
@@ -75,6 +82,7 @@ span {
   font-weight: bold;
   text-decoration: underline;
   text-decoration-color: red;
+  font-family: 'cursive';
 }
 .card:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -97,7 +105,10 @@ span {
   background: white;
 }
 body {
-  background: url("bg.jpg") no-repeat center
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   background: url("bg.jpg") no-repeat center
     center / cover;
 }
 @media (max-width: 479px) {

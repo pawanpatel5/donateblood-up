@@ -11,9 +11,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 3px solid skyblue;
+  flex-grow: 1;
   margin: 50px auto;
-  background: white;
 }
 #donor h2 {
   text-align: center;
@@ -23,9 +22,9 @@
 #details {
   width: 95%;
   padding: 30px 35px;
-  border: 2px solid pink;
+  border: 2px solid skyblue;
   border-radius: 8px;
-  background: pink;
+  background: rgb(249, 187, 197, 0.5);
 }
 #details div {
   margin-bottom: 10px;
@@ -109,7 +108,10 @@ select {
   background: white;
 }
 body {
-  background: url("bg.jpg") no-repeat center
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   background: url("bg.jpg") no-repeat center
     center / cover;
 }
 @media (max-width: 479px) {
